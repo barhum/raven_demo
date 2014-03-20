@@ -17,21 +17,25 @@
   <%= submit_tag 'Go' %>
 <% end %>
 
-<ul>Request Values
+
   <% if @raven %>
+    <ul>Request Values
     <% @raven.values.each do |k, v| %>
       <li><%= k + ' = ' + v %></li>
     <% end %>
+    </ul>
   <% end %>
-</ul>
 
-<ul>Response Values
+
+
   <% if @response %>
+    <ul>Response Values
     <% @response.values.each do |k, v| %>
       <li><%= k + ' = ' + v %></li>
     <% end %>
     <li><%= @response.getRavenResponseString %></li>
+    </ul>
   <% end %>
-</ul>    
+    
 
 
