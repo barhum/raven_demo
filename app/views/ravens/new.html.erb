@@ -1,9 +1,0 @@
-<% @raven.values.each do |k,v| %>
-   <li><%=  k + ' = ' + v %></li>
-<% end %>    
-
-
-<%= form_tag('/ravens/', :method => 'get') do %>
-  <%= text_field_tag :operation, @operation %>
-  <%= submit_tag 'Go' %>
-<% end %>
