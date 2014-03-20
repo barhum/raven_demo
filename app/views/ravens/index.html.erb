@@ -1,0 +1,37 @@
+
+<%= form_tag('/ravens/', :method => 'get') do %>
+  <li><%= select_tag :operation, options_for_select([ "submit"], 'operation') %></li>
+  <li><%= label_tag("amount") %>
+  <%= number_field_tag(:amount) %></li>
+  <li><%= label_tag("PRN") %>
+  <%= number_field_tag(:prn) %></li>
+  <li><%= label_tag("Currency") %>
+  <%= select_tag :currency, options_for_select([ "USD"]) %></li>
+  <li><%= label_tag("Card Number") %>
+  <%= number_field_tag(:cardNumber) %></li>
+  <li><%= label_tag("Payment Type") %>
+  <%= select_tag :pymtType, options_for_select([ "cc_debit"]) %></li>
+  <li><%= label_tag("Expiration MM/YY") %>
+  <%= number_field_tag(:expiryMonth, nil, in: 1...13)%>
+  <%= number_field_tag(:expiryYear, nil, in: 14...25)%></li>
+  <%= submit_tag 'Go' %>
+<% end %>
+
+<ul>Request Values
+  <% if @raven %>
+    <% @raven.values.each do |k, v| %>
+      <li><%= k + ' = ' + v %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<ul>Response Values
+  <% if @response %>
+    <% @response.values.each do |k, v| %>
+      <li><%= k + ' = ' + v %></li>
+    <% end %>
+    <li><%= @response.getRavenResponseString %></li>
+  <% end %>
+</ul>    
+
+
