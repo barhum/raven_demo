@@ -26,4 +26,12 @@ Raventest::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.user = "ernest"
+  config.secret = 'all good men die young'
+  config.gateway = "https://demo.pacnetservices.com/realtime"
+  config.prefix = "TEST"
+  config.ravenDebug = "off"
+  config.rapiVersion = "2"
+  config.rapiInterface = "Rails0.1"
 end

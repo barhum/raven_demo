@@ -3,7 +3,7 @@
   <li><%= select_tag :operation, options_for_select([ "submit"], 'operation') %></li>
   <li><%= label_tag("amount") %>
   <%= number_field_tag(:amount) %></li>
-  <li><%= label_tag("PRN") %>
+  <li><%= label_tag("PRN, try 847995") %>
   <%= number_field_tag(:prn) %></li>
   <li><%= label_tag("Currency") %>
   <%= select_tag :currency, options_for_select([ "USD"]) %></li>
@@ -17,7 +17,7 @@
   <%= submit_tag 'Go' %>
 <% end %>
 
-
+  
   <% if @raven %>
     <ul>Request Values
     <% @raven.values.each do |k, v| %>
@@ -33,7 +33,7 @@
     <% @response.values.each do |k, v| %>
       <li><%= k + ' = ' + v %></li>
     <% end %>
-    <li><%= @response.getRavenResponseString %></li>
+    <li><%= @response.ravenResponseString %></li>
     </ul>
   <% end %>
     
