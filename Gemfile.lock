@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/barhum/raven.git
-  revision: b5543e0235f8a5967843e68f115d62bd9ad68979
+  revision: 84f50b7acad019c459e99e68e5118af80ba50e7d
   specs:
     raven (0.0.1)
       rails (~> 4.0.2)

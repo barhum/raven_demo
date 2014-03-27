@@ -32,6 +32,4 @@ Raventest::Application.configure do
   config.gateway = "https://demo.pacnetservices.com/realtime"
   config.prefix = "TEST"
   config.ravenDebug = "off"
-  config.rapiVersion = "2"
-  config.rapiInterface = "Rails0.1"
 end
