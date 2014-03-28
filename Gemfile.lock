@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/barhum/raven.git
-  revision: 84f50b7acad019c459e99e68e5118af80ba50e7d
+  revision: 24036b8354bbf63f446418286b651e6e4bb6ce97
   specs:
     raven (0.0.1)
       rails (~> 4.0.2)
@@ -82,7 +82,7 @@ GEM
       activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.2.1)
+    rake (10.2.2)
     rdoc (4.1.1)
       json (~> 1.4)
     sass (3.2.18)

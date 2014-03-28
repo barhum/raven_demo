@@ -27,9 +27,12 @@ Raventest::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.user = "ernest"
-  config.secret = 'all good men die young'
-  config.gateway = "https://demo.pacnetservices.com/realtime"
-  config.prefix = "TEST"
-  config.ravenDebug = "off"
+   Raven.config do |config|
+    config.user = "ernest"
+    config.secret = 'all good men die young'
+    config.gateway = "https://demo.pacnetservices.com/realtime"
+    config.prefix = "TEST"
+    config.ravenDebug = "off"
+  end
+
 end
